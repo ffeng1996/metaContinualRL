@@ -3,11 +3,14 @@
 ## Papers
 [Learning to Learn without Forgetting by Maximizing Transfer and Minimizing Interference (MER)](https://arxiv.org/pdf/1810.11910.pdf) [[code]](https://github.com/mattriemer/mer)
 
+[Deep Online Learning via Meta-learning: Continual Adaptation for Model-based RL](https://arxiv.org/pdf/1812.07671.pdf)
+
+[Learning to Adapt in Dynamic, Real-world Enviroments Through Meta-Reinforcement Learning](https://arxiv.org/pdf/1803.11347.pdf)
+
 [Continual Reinforcement Learning with Diversity Exploration and Adversarial Self-Correction](https://arxiv.org/pdf/1906.09205.pdf)
 
 [DISCORL: Continual Reinforcement Learning via Policy Distillation](https://arxiv.org/pdf/1907.05855.pdf)
 
-[Deep Online Learning VIA Meta-learning: Continual Adaptation for Model-based RL](https://arxiv.org/pdf/1812.07671.pdf)
 
 [Continual Reinforcement Learning with Complex Synapses](http://proceedings.mlr.press/v80/kaplanis18a/kaplanis18a.pdf)
 
