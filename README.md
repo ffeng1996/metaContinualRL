@@ -5,6 +5,8 @@
 
 [Deep Online Learning via Meta-learning: Continual Adaptation for Model-based RL](https://arxiv.org/pdf/1812.07671.pdf)
 
+[Reinforcement Learning for Non-Stationary Environments](https://arxiv.org/pdf/1905.03970.pdf)
+
 [Learning to Adapt in Dynamic, Real-world Enviroments Through Meta-Reinforcement Learning](https://arxiv.org/pdf/1803.11347.pdf)
 
 [Continual Reinforcement Learning with Diversity Exploration and Adversarial Self-Correction](https://arxiv.org/pdf/1906.09205.pdf)
