@@ -1,7 +1,35 @@
 # metaContinualRL
 
+## Code setup
+### Requirement
+python == 2.7 or above  
+tensorflow == 1.15.0  
+gym == 0.16.0  
+ple  
+
+To config ple environment, follow this [[guide]](https://github.com/ntasfi/PyGame-Learning-Environment):
+```
+git clone https://github.com/ntasfi/PyGame-Learning-Environment.git
+cd PyGame-Learning-Environment/
+pip install -e .
+```
+### How to run the code
+#### Download the code
+```
+git clone https://github.com/ffeng1996/metaContinualRL
+```
+#### Run the code
+For paper 'Learning to Learn without Forgetting by Maximizing Transfer and Minimizing Interference (MER)' with Reinforcement Learning version:
+```buildoutcfg
+python MER.py
+```
+For paper 'Continual Reinforcement Learning with Complex Synapses':
+```buildoutcfg
+python Complex_Synapses.py
+```
+
 ## Papers
-[Learning to Learn without Forgetting by Maximizing Transfer and Minimizing Interference (MER)](https://arxiv.org/pdf/1810.11910.pdf) [[code]](https://github.com/mattriemer/mer)
+[Learning to Learn without Forgetting by Maximizing Transfer and Minimizing Interference (MER)](https://arxiv.org/pdf/1810.11910.pdf) [[code for supervision]](https://github.com/mattriemer/mer)
 
 [Deep Online Learning via Meta-learning: Continual Adaptation for Model-based RL](https://arxiv.org/pdf/1812.07671.pdf)
 
