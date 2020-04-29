@@ -31,11 +31,11 @@ $ pip install -e .
 git clone https://github.com/ffeng1996/metaContinualRL
 ```
 #### Quickly hands-on
-Run following scripts to reproduce baselines:
+Run following scripts to reproduce experiments:
 ```
 bash baseline.sh
 ```
-## Issue / Want to Contribute ? 
+## Issue/Want to Contribute ? 
 Open a new issue or do a pull request in case you are facing any difficulty with the code base or if you want to contribute.
 
 ## Related Works
