@@ -23,6 +23,10 @@ $ git clone https://github.com/ntasfi/PyGame-Learning-Environment.git
 $ cd PyGame-Learning-Environment/
 $ pip install -e .
 ```
+Experimental platform (hardwares):
+* `Intel CPU`
+* `Nvidia RTX 2080 Ti GPU`
+* `CUDA Toolkit 10.*`
 
 
 ### How to run the code
