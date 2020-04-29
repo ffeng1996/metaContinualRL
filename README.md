@@ -7,7 +7,7 @@ tensorflow == 1.15.0
 gym == 0.16.0  
 ple  
 
-To config ple environment, follow this [[guide]](https://github.com/ntasfi/PyGame-Learning-Environment):
+To config ple environment, follow this [guide](https://github.com/ntasfi/PyGame-Learning-Environment):
 ```
 git clone https://github.com/ntasfi/PyGame-Learning-Environment.git
 cd PyGame-Learning-Environment/
