@@ -65,6 +65,12 @@ class DQN:
         # 'mse' or 'huber'
         self.loss_type = loss_type
         self.metaplastic = metaplastic
+        self.fisher_diagonal = None
+        self.fisher_minibatch = None
+
+        self.fisher_accumulate_op = None
+        self.fisher_full_batch_average_op = None
+        self.fisher_zero_op = None
         if self.metaplastic and self.task_specific:
             # True if task-specific variables are metaplastic
             self.meta_ts = meta_ts
@@ -189,7 +195,8 @@ class DQN:
             elif self.loss_type == 'huber':
                 self.loss = tf.losses.huber_loss(self.nextQ, self.Qout)
             elif self.loss_type == 'swc':
-                self.loss = tf.losses.huber_loss(self.nextQ, self.Qout)
+                self.loss = self.fisher_multiplier / 2) * self.penalty + tf.losses.huber_loss(self.nextQ, self.Qout)
+
             if self.optimiser == 'adam':
                 self.trainer = tf.train.AdamOptimizer(learning_rate=self.lr_placeholder)
             self.updateModel = self.trainer.minimize(self.loss)
@@ -453,6 +460,31 @@ class DQN:
         self.update_target_ops = ops
 
         return ops
+
+    def create_fisher_diagonal(self):
+        self.fisher_minibatch = self.fisher_minibatch_sum(self.w_1,self.w_2,self.b_1,self.b_2)
+        self.create_fisher_ops()
+
+    def create_fisher_ops(self):
+        self.fisher_diagonal = self.w_1(c=0.0, trainable=False) +\
+                               self.w_2(c=0.0, trainable=False)
+
+        self.fisher_accumulate_op = [tf.assign_add(f1, f2) for f1, f2 in zip(self.fisher_diagonal, self.fisher_minibatch)]
+        self.sacle=1
+        self.fisher_full_batch_average_op = [tf.assign(var, self.scale * var) for var in self.fisher_diagonal]
+        self.fisher_zero_op = [tf.assign(tensor, tf.zeros_like(tensor)) for tensor in self.fisher_diagonal]
+
+    def update_fisher_full_batch(self, sess, dataset):
+        sess.run(self.fisher_zero_op)
+        for _ in range(64):
+            self.accumulate_fisher(sess, dataset)
+        sess.run(self.fisher_full_batch_average_op)
+        sess.run(self.update_theta_op)
+
+    def accumulate_fisher(self, sess, dataset):
+        batch_xs, batch_ys = dataset.next_batch(64)
+        sess.run(self.fisher_accumulate_op, feed_dict={self.x_fisher: batch_xs, self.y_fisher: batch_ys})
+
 
     def filtered_update_target_graph(self, policy_scope, tau):
         policy_vars = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope=policy_scope)
