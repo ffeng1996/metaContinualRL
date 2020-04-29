@@ -3,8 +3,9 @@
 This is the implementation of the following course project report: 
 [Reconciling Meta Learning and Regularization in Lifelong Reinforcement Learning with Non-stationary Environments](https://github.com/ffeng1996/metaContinualRL/blob/master/paper/paper.pdf).
 
-![](figs/figure.pdf)
-
+<div  align="center">    
+<img src="https://github.com/ffeng1996/metaContinualRL/blob/master/figs/figure.pdf" width = "380" height = "200" alt="Structure Diagram" align=center />
+</div>
 ## Requirements
 The current version of the code has been tested with following libs:
 * `tensorflow 1.15.0`
