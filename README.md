@@ -28,14 +28,11 @@ $ pip install -e .
 ```
 git clone https://github.com/ffeng1996/metaContinualRL
 ```
-#### Run the code
-For paper 'Learning to Learn without Forgetting by Maximizing Transfer and Minimizing Interference (MER)' with Reinforcement Learning version:
-```buildoutcfg
-python MER.py
+#### Quickly hands-on
+Run following scripts to reproduce baselines:
 ```
-For paper 'Continual Reinforcement Learning with Complex Synapses':
-```buildoutcfg
-python Complex_Synapses.py
+ python3 benchmark1.py
+ python3 benchmark2.py
 ```
 
 ## Papers
