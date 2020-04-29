@@ -31,11 +31,12 @@ git clone https://github.com/ffeng1996/metaContinualRL
 #### Quickly hands-on
 Run following scripts to reproduce baselines:
 ```
- python3 benchmark1.py
- python3 benchmark2.py
+bash baseline.sh
 ```
+## Issue / Want to Contribute ? 
+Open a new issue or do a pull request in case you are facing any difficulty with the code base or if you want to contribute.
 
-## Papers
+## Related Works
 [Learning to Learn without Forgetting by Maximizing Transfer and Minimizing Interference (MER)](https://arxiv.org/pdf/1810.11910.pdf) [[code for supervision]](https://github.com/mattriemer/mer)
 
 [Deep Online Learning via Meta-learning: Continual Adaptation for Model-based RL](https://arxiv.org/pdf/1812.07671.pdf)
