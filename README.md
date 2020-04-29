@@ -1,4 +1,4 @@
-# metaContinualRL
+# Reconciling Meta Learning and Regularization in Lifelong Reinforcement Learning with Non-stationary Environments
 
 This is the implementation of the following course project report: 
 [Reconciling Meta Learning and Regularization in Lifelong Reinforcement Learning with Non-stationary Environments](https://github.com/ffeng1996/metaContinualRL/blob/master/paper/paper.pdf).
