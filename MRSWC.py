@@ -63,7 +63,7 @@ train_params['r_scale'] = 1
 # True if scale catcher reward rather than cartpole
 train_params['catcherscale'] = False
 train_params['replay_sizes'] = {'cartpole': 2000, 'catcher': 2000}
-train_params['loss_type'] = 'swc'
+train_params['loss_type'] = 'mse'
 # Set value for soft q temperature (i.e., \alpha in Eq.12), set as None for normal q learning
 train_params['soft_tau'] = 0.01
 # Set value for boltzmann policy temp, set as None for greedy policy
